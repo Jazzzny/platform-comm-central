@@ -257,9 +257,8 @@ toolbar[mode="text"] .button-appmenu .toolbarbutton-icon {
 
 
 .mail-toolbox > toolbar {
-  -moz-appearance: none;
   margin-inline-start: 0;
-  border-style: none;
+  border-bottom: none;
   /* force iconsize="small" on these toolbars */
   counter-reset: smallicons;
 }
