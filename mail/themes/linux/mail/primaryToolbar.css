@@ -18,6 +18,9 @@
 .mail-toolbox,
 .contentTabToolbox {
   -moz-appearance: none;
+  background-image: linear-gradient(var(--toolbarHighlight),
+                                    var(--toolbarHighlight));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
 }
 
 .mail-toolbox::after,
@@ -31,11 +34,17 @@
 .mail-toolbox > toolbar,
 .contentTabToolbox > toolbar {
   -moz-appearance: none;
+  background: transparent;
 }
 
 .mail-toolbox > toolbar {
   /* force iconsize="small" on these toolbars */
   counter-reset: smallicons;
+}
+
+/* remove the small icons checkbox in Customize window */
+#smallicons {
+  display: none;
 }
 
 /* ::::: primary toolbar buttons ::::: */
@@ -342,7 +351,7 @@ toolbar[mode="text"] .button-appmenu .toolbarbutton-icon {
 }
 
 #appmenu_addons {
-  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric-16.png");
+  list-style-image: url("chrome://messenger/skin/icons/extensionGeneric.svg");
 }
 
 #appmenu_configedit {

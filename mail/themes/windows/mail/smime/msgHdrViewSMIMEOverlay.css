@@ -15,26 +15,54 @@
   visibility: visible;
 }
 
-#signedHdrIcon[signed="ok"] {
-  list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignOk.png");
+@media (-moz-os-version: windows-xp) {
+  #signedHdrIcon[signed="ok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignOk-XP.png");
+  }
+
+  #signedHdrIcon[signed="unknown"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignUnknown-XP.png");
+  }
+
+  #signedHdrIcon[signed="mismatch"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignUnknown-XP.png");
+  }
+
+  #signedHdrIcon[signed="notok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignNotOk-XP.png");
+  }
+
+  #encryptedHdrIcon[encrypted="ok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrCryptoOk-XP.png");
+  }
+
+  #encryptedHdrIcon[encrypted="notok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrCryptoNotOk-XP.png");
+  }
 }
 
-#signedHdrIcon[signed="unknown"] {
-  list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignUnknown.png");
-}
+@media not all and (-moz-os-version: windows-xp) {
+  #signedHdrIcon[signed="ok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignOk.png");
+  }
 
-#signedHdrIcon[signed="mismatch"] {
-  list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignUnknown.png");
-}
+  #signedHdrIcon[signed="unknown"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignUnknown.png");
+  }
 
-#signedHdrIcon[signed="notok"] {
-  list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignNotOk.png");
-}
+  #signedHdrIcon[signed="mismatch"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignUnknown.png");
+  }
 
-#encryptedHdrIcon[encrypted="ok"] {
-  list-style-image: url("chrome://messenger/skin/smime/icons/hdrCryptoOk.png");
-}
+  #signedHdrIcon[signed="notok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrSignNotOk.png");
+  }
 
-#encryptedHdrIcon[encrypted="notok"] {
-  list-style-image: url("chrome://messenger/skin/smime/icons/hdrCryptoNotOk.png");
+  #encryptedHdrIcon[encrypted="ok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrCryptoOk.png");
+  }
+
+  #encryptedHdrIcon[encrypted="notok"] {
+    list-style-image: url("chrome://messenger/skin/smime/icons/hdrCryptoNotOk.png");
+  }
 }
