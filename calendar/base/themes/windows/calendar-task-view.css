@@ -4,8 +4,14 @@
 
 @import url(chrome://calendar-common/skin/calendar-task-view.css);
 
+#calendar-task-view-splitter {
+    border: none;
+    min-height: 5px;
+}
+
 #calendar-task-details-container {
     border-top: 1px solid ThreeDShadow;
+    border-left: 1px solid ThreeDShadow;
     border-right: 0px;
     border-bottom: 0px;
     overflow: hidden;
@@ -94,6 +100,17 @@
 #view-task-edit-field,
 #task-text-filter-field {
   width: 15em;
+}
+
+#calendar-task-box #calendar-task-view-splitter {
+  border: none;
+  border-bottom: 1px solid #A9B7C9;
+  min-height: 0;
+  height: 5px;
+  background-color: transparent;
+  margin-top: -5px;
+  position: relative;
+  z-index: 10;
 }
 
 #calendar-nav-control {
