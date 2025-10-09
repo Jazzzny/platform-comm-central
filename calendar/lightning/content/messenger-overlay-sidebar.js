@@ -402,12 +402,7 @@ function ltnOnLoad(event) {
         MailToolboxCustomizeDone(aEvent, "CustomizeTaskToolbar");
     };
 
-    gCalendarUIPrefsObserver.onLoad();
-    // If we're on Epyrus, we don't need this... I think everyone knows
-    // what Lightning calendar is and whether they want it by now. 
-    if (Services.appinfo.ID != "{29877c1d-27df-4421-9a79-382c31470151}") {
-      ltnIntegrationCheck();
-    }
+    ltnIntegrationCheck();
 
     Services.obs.notifyObservers(window, "lightning-startup-done", false);
 }
@@ -636,8 +631,6 @@ function LtnObserveDisplayDeckChange(event) {
 function ltnFinish() {
     getCalendarManager().removeObserver(gInvitationsCalendarManagerObserver);
 
-    gCalendarUIPrefsObserver.onUnload();
-
     // Remove listener for mailContext.
     let mailContextPopup = document.getElementById("mailContext");
     if (mailContextPopup) {
@@ -693,35 +686,6 @@ var gInvitationsCalendarManagerObserver = {
 
     onCalendarDeleting: function(aCalendar) {
     }
-};
-
-var gCalendarUIPrefsObserver = {
-    prefBranch : null,
-
-    update: function() {
-        var hideTabButtons = this.prefBranch.getBoolPref("hideTabButtons");
-        document.getElementById('calendar-tab-button').hidden = hideTabButtons;
-        document.getElementById('task-tab-button').hidden = hideTabButtons;
-    },
-
-    onLoad: function() {
-        var prefService = Components.classes["@mozilla.org/preferences-service;1"]
-                                    .getService(Components.interfaces.nsIPrefService);
-        this.prefBranch = prefService.getBranch("calendar.ui.");
-        this.prefBranch.addObserver("", gCalendarUIPrefsObserver, false);
-        this.update();
-    },
-
-    onUnload: function() {
-        this.prefBranch.removeObserver("", gCalendarUIPrefsObserver);
-    },
-
-    observe: function(subject, topic, data) {
-        if (topic != "nsPref:changed") {
-            return;
-        }
-        this.update();
-    },
 };
 
 function scheduleInvitationsUpdate(firstDelay) {
