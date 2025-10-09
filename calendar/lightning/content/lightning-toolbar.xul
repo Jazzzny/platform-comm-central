@@ -115,14 +115,9 @@
 
   <toolbox id="calendar-toolbox"
            class="mail-toolbox"
-#ifdef XP_WIN
-           mode="icons"
-           defaultmode="icons"
-           iconsize="large"
-           defaulticonsize="large"
-#else
            mode="full"
            defaultmode="full"
+#ifdef XP_MACOSX
            iconsize="small"
            defaulticonsize="small"
 #endif
@@ -178,14 +173,10 @@
     <toolbar id="calendar-toolbar2" class="inline-toolbar chromeclass-toolbar"
              toolbarname="&lightning.toolbar.calendar.name;"
              accesskey="&lightning.toolbar.calendar.name.accesskey;"
-             fullscreentoolbar="true"
+             fullscreentoolbar="true" mode="full"
              customizable="true"
              context="calendar-toolbar-context"
-#ifdef XP_WIN
-             mode="icons"
-             iconsize="large"
-#else
-             mode="full"
+#ifdef XP_MACOSX
              iconsize="small"
 #endif
              defaultset="calendar-synchronize-button,calendar-newevent-button,calendar-newtask-button,calendar-edit-button,calendar-delete-button,spring,calendar-appmenu-button"/>
@@ -194,14 +185,9 @@
 
   <toolbox id="task-toolbox"
            class="mail-toolbox"
-#ifdef XP_WIN
-           mode="icons"
-           defaultmode="icons"
-           iconsize="large"
-           defaulticonsize="large"
-#else
            mode="full"
            defaultmode="full"
+#ifdef XP_MACOSX
            iconsize="small"
            defaulticonsize="small"
 #endif
@@ -247,14 +233,10 @@
     <toolbar id="task-toolbar2" class="inline-toolbar chromeclass-toolbar"
              toolbarname="&lightning.toolbar.task.name;"
              accesskey="&lightning.toolbar.task.name.accesskey;"
-             fullscreentoolbar="true"
+             fullscreentoolbar="true" mode="full"
              customizable="true"
              context="task-toolbar-context"
-#ifdef XP_WIN
-             mode="icons"
-             iconsize="large"
-#else
-             mode="full"
+#ifdef XP_MACOSX
              iconsize="small"
 #endif
              defaultset="task-synchronize-button,task-newevent-button,task-newtask-button,task-edit-button,task-delete-button,spring,task-appmenu-button"/>

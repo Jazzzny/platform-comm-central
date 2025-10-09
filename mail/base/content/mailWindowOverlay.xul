@@ -3052,14 +3052,9 @@
 
 <toolbox id="mail-toolbox"
          class="mail-toolbox"
-#ifdef XP_WIN
-         mode="icons"
-         defaultmode="icons"
-         iconsize="large"
-         defaulticonsize="large"
-#else
          mode="full"
          defaultmode="full"
+#ifdef XP_MACOSX
          iconsize="small"
          defaulticonsize="small"
 #endif
@@ -3380,17 +3375,11 @@
            class="inline-toolbar chromeclass-toolbar"
            toolbarname="&showMessengerToolbarCmd.label;"
            accesskey="&showMessengerToolbarCmd.accesskey;"
-           fullscreentoolbar="true"
+           fullscreentoolbar="true" mode="full"
            customizable="true"
            context="toolbar-context-menu"
-#ifdef XP_WIN
-           mode="icons"
-           iconsize="large"
-#else
-           mode="full"
-           iconsize="small"
-#endif
 #ifdef XP_MACOSX
+           iconsize="small"
            defaultset="button-getmsg,button-newmsg,button-address,spacer,button-tag,qfb-show-filter-bar,spring,gloda-search,button-appmenu">
 #else
            defaultset="button-getmsg,button-newmsg,button-address,separator,button-tag,qfb-show-filter-bar,spring,gloda-search,button-appmenu">
