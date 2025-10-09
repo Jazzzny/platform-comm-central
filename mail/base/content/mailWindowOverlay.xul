@@ -3394,9 +3394,9 @@
            iconsize="small"
 #endif
 #ifdef XP_MACOSX
-           defaultset="button-getmsg,button-newmsg,button-address,spacer,button-tag,qfb-show-filter-bar,spring,gloda-search">
+           defaultset="button-getmsg,button-newmsg,button-address,spacer,button-tag,qfb-show-filter-bar,spring,gloda-search,button-appmenu">
 #else
-           defaultset="button-getmsg,button-newmsg,button-address,separator,button-tag,qfb-show-filter-bar,spring,gloda-search">
+           defaultset="button-getmsg,button-newmsg,button-address,separator,button-tag,qfb-show-filter-bar,spring,gloda-search,button-appmenu">
 #endif
   </toolbar>
 

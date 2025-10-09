@@ -157,6 +157,12 @@ function migrateCalendarUI() {
     }
 
     try {
+        if (currentUIVersion < 1) {
+            let calbar = document.getElementById("calendar-toolbar2");
+            calbar.insertItem("calendar-appmenu-button");
+            let taskbar = document.getElementById("task-toolbar2");
+            taskbar.insertItem("task-appmenu-button");
+        }
         if (currentUIVersion < 2) {
             // If the user has customized the event/task window dialog toolbar,
             // we copy that custom set of toolbar items to the event/task tab
@@ -167,9 +173,9 @@ function migrateCalendarUI() {
 
             if (xulStore.hasValue(uri, "event-toolbar", "currentset")) {
                 let windowSet = xulStore.getValue(uri, "event-toolbar", "currentset");
-                let items = "";
+                let items = "calendar-item-appmenu-button";
                 if (!windowSet.includes("spring")) {
-                    items = "spring";
+                    items = "spring," + items;
                 }
                 let previousSet = windowSet == "__empty" ? "" : windowSet + ",";
                 let tabSet = previousSet + items;
