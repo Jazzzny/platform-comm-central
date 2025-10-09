@@ -402,7 +402,7 @@ function ltnOnLoad(event) {
         MailToolboxCustomizeDone(aEvent, "CustomizeTaskToolbar");
     };
 
-    ltnIntegrationCheck();
+    //ltnIntegrationCheck();
 
     Services.obs.notifyObservers(window, "lightning-startup-done", false);
 }
