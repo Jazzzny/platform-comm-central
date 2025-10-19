@@ -138,8 +138,8 @@ pref("extensions.hotfix.cert.checkAttributes", false);
 pref("extensions.hotfix.certs.1.sha1Fingerprint", "91:53:98:0C:C1:86:DF:47:8F:35:22:9E:11:C9:A7:31:04:49:A1:AA");
 pref("extensions.hotfix.certs.2.sha1Fingerprint", "39:E7:2B:7A:5B:CF:37:78:F9:5D:4A:E0:53:2D:2F:3D:68:53:C5:60");
 
-// Don't disable add-ons installed into the shared user and shared system 
-// areas by default. This does not include the application directory. 
+// Don't disable add-ons installed into the shared user and shared system
+// areas by default. This does not include the application directory.
 // See the SCOPE constants in AddonManager.jsm for values to use here
 pref("extensions.autoDisableScopes", 0);
 
@@ -464,7 +464,7 @@ pref("mail.tabs.loadInBackground", true);
 pref("mail.tabs.tabMinWidth", 100);
 pref("mail.tabs.tabMaxWidth", 210);
 pref("mail.tabs.tabClipWidth", 140);
-pref("mail.tabs.autoHide", true);
+pref("mail.tabs.autoHide", false);
 pref("mail.tabs.closeWindowWithLastTab", true);
 
 // Where to show tab close buttons:
@@ -475,7 +475,7 @@ pref("mail.tabs.closeWindowWithLastTab", true);
 pref("mail.tabs.closeButtons", 1);
 
 // Allow the tabs to be in the titlebar
-pref("mail.tabs.drawInTitlebar", false);
+pref("mail.tabs.drawInTitlebar", true);
 
 
 // The breakpad report server to link to in about:crashes
@@ -826,7 +826,7 @@ pref("privacy.cpd.history", true);
 pref("privacy.cpd.cookies", true);
 pref("privacy.cpd.cache", true);
 
-// Google OAuth2 keys -- may not work reliably. 
+// Google OAuth2 keys -- may not work reliably.
 pref("oauth2.google.clientid", "691176065537-vq1f5h7j2a5c9u1o65gf4lihjdahl32r.apps.googleusercontent.com");
 pref("oauth2.google.clientsecret", "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");
 
