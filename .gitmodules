@@ -1,0 +1,6 @@
+[submodule "platform"]
+	path = platform
+	url = https://Jazzzny@github.com/Jazzzny/platform-uxp.git
+[submodule "suite"]
+	path = suite
+	url = https://Jazzzny@github.com/Jazzzny/platform-suite.git
