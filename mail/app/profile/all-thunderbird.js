@@ -827,12 +827,14 @@ pref("privacy.cpd.cookies", true);
 pref("privacy.cpd.cache", true);
 
 // Google OAuth2 keys -- may not work reliably.
-pref("oauth2.google.clientid", "691176065537-vq1f5h7j2a5c9u1o65gf4lihjdahl32r.apps.googleusercontent.com");
-pref("oauth2.google.clientsecret", "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");
+pref("oauth2.google.clientid", "406964657835-aq8lmia8j95dhl1a2bvharmfk3t1hgqj.apps.googleusercontent.com");
+pref("oauth2.google.clientsecret", "kSmqreRr0qwBWJgbf5Y-PjSU");
 
 // No Mail.ru OAuth2 keys...
 pref("oauth2.mailru.clientid", "");
 pref("oauth2.mailru.clientsecret", "");
+
+pref("oauth2.outlook.clientid", "9e5f94bc-e8a4-4e73-b8be-63364c29d753");
 
 // What default should we use for the time span in the sanitizer:
 // 0 - Clear everything

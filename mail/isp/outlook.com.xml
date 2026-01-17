@@ -18,6 +18,7 @@
       <hostname>outlook.office365.com</hostname>
       <port>993</port>
       <socketType>SSL</socketType>
+      <authentication>OAuth2</authentication>
       <authentication>password-cleartext</authentication>
       <username>%EMAILADDRESS%</username>
     </incomingServer>
@@ -25,6 +26,7 @@
       <hostname>outlook.office365.com</hostname>
       <port>995</port>
       <socketType>SSL</socketType>
+      <authentication>OAuth2</authentication>
       <authentication>password-cleartext</authentication>
       <username>%EMAILADDRESS%</username>
       <pop3>
@@ -46,8 +48,16 @@
       <hostname>smtp.office365.com</hostname>
       <port>587</port>
       <socketType>STARTTLS</socketType>
+      <authentication>OAuth2</authentication>
       <authentication>password-cleartext</authentication>
       <username>%EMAILADDRESS%</username>
     </outgoingServer>
   </emailProvider>
+  <oAuth2>
+    <issuer>login.microsoftonline.com</issuer>
+    <!-- Microsoft Identity Platform v2 scopes for IMAP/SMTP and OIDC -->
+    <scope>https://outlook.office.com/IMAP.AccessAsUser.All https://outlook.office.com/POP.AccessAsUser.All https://outlook.office.com/SMTP.Send offline_access</scope>
+    <authURL>https://login.microsoftonline.com/common/oauth2/v2.0/authorize</authURL>
+    <tokenURL>https://login.microsoftonline.com/common/oauth2/v2.0/token</tokenURL>
+  </oAuth2>
 </clientConfig>
