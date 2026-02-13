@@ -112,11 +112,10 @@ pref("app.update.idletime", 60);
 pref("app.releaseNotesURL", "");
 
 // URL for "Learn More" for Crash Reporter.
-pref("toolkit.crashreporter.infoURL",
-     "");");
+pref("toolkit.crashreporter.infoURL", "");
 
 // Base URL for web-based support pages.
-pref("app.support.baseURL", "https://forum.palemoon.org/viewforum.php?f=73");
+pref("app.support.baseURL", "https://powerfox.jazzzny.me/powerbird.html");
 
 // Show error messages in error console.
 pref("javascript.options.showInConsole", true);

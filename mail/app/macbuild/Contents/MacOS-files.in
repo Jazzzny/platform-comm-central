@@ -1,7 +1,7 @@
 /*.app/***
 /*.dylib
 /certutil
-/epyrus-bin
+/powerbird-bin
 /pk12util
 /ssltunnel
 /xpcshell

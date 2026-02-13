@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>epyrus</string>
+	<string>powerbird</string>
 	<key>CFBundleGetInfoString</key>
 	<string>%MAC_APP_NAME% %APP_VERSION%</string>
 	<key>CFBundleIconFile</key>
@@ -63,7 +63,7 @@
 		<string>0</string>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.7.0</string>
+	<string>10.5.0</string>
 	<key>NSSupportsAutomaticGraphicsSwitching</key>
 	<true/>
 	<key>NSRequiresAquaSystemAppearance</key>
@@ -78,9 +78,9 @@
 			<key>UTTypeIdentifier</key>
 			<string>com.mozilla.thunderbird.mozeml</string>
 			<key>UTTypeReferenceURL</key>
-			<string>http://epyrus.org</string>
+			<string>https://powerfox.jazzzny.me/powerbird.html</string>
 			<key>UTTypeDescription</key>
-			<string>Epyrus Mail Message</string>
+			<string>PowerBird Mail Message</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.data</string>
@@ -112,7 +112,7 @@
 			</array>
 
 			<key>CFBundleTypeName</key>
-			<string>Epyrus Mail Message</string>
+			<string>PowerBird Mail Message</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>LSTypeIsPackage</key>
@@ -128,7 +128,7 @@
 			    <string>eml</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>Epyrus E-mail</string>
+			<string>PowerBird E-mail</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 		</dict>
